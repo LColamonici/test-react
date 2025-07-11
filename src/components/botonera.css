@@ -1,0 +1,8 @@
+.Botonera{
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #282c34;
+  background-color: #585c84;
+  padding: 2rem 0;
+  border-radius: 2rem;
+}
