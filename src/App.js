@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import Boton from './components/boton'
-import Lista from './components/Lista';
-import Botonera from './components/botonera';
+import Lista from './components/lista/Lista';
+import Botonera from './components/botonera/botonera';
+import NuevoElem from './components/nuevoElem/nuevoElem';
 
 function App() {
   const contenidoLista = [
@@ -19,10 +18,15 @@ function App() {
     {id:3, txt:"soy Bob"},
   ];
 
+  function agregar_elemento_handler(elem){
+    contenidoLista.push(elem);
+  }
+
   return (
   <div className='App'>
     <h1>Hola mundo!!!</h1>
     <Botonera contenido={botones}/>
+    <NuevoElem onAddElem={agregar_elemento_handler}/>
     <Lista contenido={contenidoLista} />
   </div>
   );

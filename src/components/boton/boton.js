@@ -3,7 +3,7 @@ import React from "react"
 
 function Boton(props) {
     //const txt = Boton.texto;
-    return (<button>{props.texto}</button>);
+    return (<button type={props.tipo}>{props.texto}</button>);
 }
 
 export default Boton;

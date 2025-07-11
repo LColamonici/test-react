@@ -1,6 +1,6 @@
 import React from "react";
 import "./botonera.css"
-import Boton from "./boton";
+import Boton from "../boton/boton";
 
 function Botonera(props)
 {
