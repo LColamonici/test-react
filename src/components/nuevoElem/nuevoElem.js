@@ -17,7 +17,7 @@ function NuevoElem(props){
     return (
     <form className="formulario" onSubmit={agregar_elemento_handler}>
         <input type="text"/>
-        <Boton texto="agregar" tipo="submit"/>
+        <button type="submit">agregar</button>
     </form>
     );
 }
