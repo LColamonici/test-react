@@ -21,13 +21,12 @@ function App() {
   function agregar_elemento_handler(elem){
     //contenidoLista.push(elem);
     setContenidoLista((lista_prev)=>[...lista_prev, elem]);
-    console.log(elem);
-    agregarElementoALista(contenidoLista.concat(elem));
+    
   }
 
   return (
   <div className='App'>
-    <h1>Hola mundo!!!</h1>
+    <h1>titulo re fachero para una app re fachera</h1>
     <Botonera contenido={botones}/>
     <NuevoElem onAddElem={agregar_elemento_handler}/>
     <Lista contenido={contenidoLista} />
