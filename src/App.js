@@ -1,16 +1,23 @@
 import './App.css';
-import React from "react";
+import React, { useState } from "react";
 import Lista from './components/lista/Lista';
 import Botonera from './components/botonera/botonera';
 import NuevoElem from './components/nuevoElem/nuevoElem';
 
 function App() {
-  const contenidoLista = [
+  /*const contenidoLista = [
     {id:1, txt:"primera"},
     {id:2, txt:"segunda"},
     {id:3, txt:"tercera"},
     {id:4, txt:"cuarta papaaaa"}
-  ];
+  ];*/
+
+  const [contenidoLista, agregarElementoALista] = useState([
+    {id:1, txt:"primera"},
+    {id:2, txt:"segunda"},
+    {id:3, txt:"tercera"},
+    {id:4, txt:"cuarta papaaaa"}
+  ]);
 
   const botones=[
     {id:1, txt:"soy un boton dinamico!"},
@@ -19,7 +26,7 @@ function App() {
   ];
 
   function agregar_elemento_handler(elem){
-    contenidoLista.push(elem);
+    agregarElementoALista(contenidoLista.concat(elem));
   }
 
   return (
