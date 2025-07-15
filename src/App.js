@@ -5,14 +5,7 @@ import Botonera from './components/botonera/botonera';
 import NuevoElem from './components/nuevoElem/nuevoElem';
 
 function App() {
-  /*const contenidoLista = [
-    {id:1, txt:"primera"},
-    {id:2, txt:"segunda"},
-    {id:3, txt:"tercera"},
-    {id:4, txt:"cuarta papaaaa"}
-  ];*/
-
-  const [contenidoLista, agregarElementoALista] = useState([
+  const [contenidoLista, setContenidoLista] = useState([
     {id:1, txt:"primera"},
     {id:2, txt:"segunda"},
     {id:3, txt:"tercera"},
@@ -26,6 +19,9 @@ function App() {
   ];
 
   function agregar_elemento_handler(elem){
+    //contenidoLista.push(elem);
+    setContenidoLista((lista_prev)=>[...lista_prev, elem]);
+    console.log(elem);
     agregarElementoALista(contenidoLista.concat(elem));
   }
 
